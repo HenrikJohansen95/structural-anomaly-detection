@@ -1,0 +1,32 @@
+# LaTex files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*-blx.bib
+
+# packages
+/jena
+/lubm
+
+# Data
+/rawdata
+
+__pycache__
+
+# pytorch
+/runs
+/checkpoints
+.mypy_cache
+
+# python
+/venv
+.vscode
+
+/lightning_logs

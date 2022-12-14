@@ -1,0 +1,17 @@
+datasetname: imdb
+DELTA: 0.625
+C: 1000000000.0
+k: 3
+lr: 0.0012572889501247751
+wd: 0.2
+pos_weight: 7.472547811303675
+
+emb: gs
+emb_dim: 192
+emb_depth: 7
+emb_dropout: 0.2
+
+agg: mean
+agg_dim: null
+agg_depth: null
+agg_dropout: null
