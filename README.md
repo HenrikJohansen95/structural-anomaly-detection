@@ -1,8 +1,11 @@
+# Structural Anomaly Detection in Knowledge Graphs Using Graph Neural Networks 
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-green)](LICENSE)
+
 Copyright (C) 2022 Henrik Syversen Johansen. The code and its documentation,
 with the exception of the thesis text itself in [thesis.pdf](thesis.pdf), is licensed under
 the BSD 3-Clause License (see [LICENSE](LICENSE)).
 
-# Structural Anomaly Detection in Knowledge Graphs Using Graph Neural Networks 
+## Abstract
 Anomalies are in general rare or somehow different elements among a set of
 elements. Identifying such elements has several important applications within
 the realms of financial fraud, review fraud, health care, security and others.
