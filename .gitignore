@@ -27,6 +27,8 @@ __pycache__
 
 # python
 /venv
-.vscode
+/.vscode
 
 /lightning_logs
+
+.vscode

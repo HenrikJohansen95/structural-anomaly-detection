@@ -47,7 +47,7 @@ venv:
 	pip install -r requirements.txt
 
 conda:
-	conda env create --verbose -f conda-env.yml -p ./venv
+	conda env create -f environment.yml -p ./venv
 
 clean:
 	rm -r lightning_logs

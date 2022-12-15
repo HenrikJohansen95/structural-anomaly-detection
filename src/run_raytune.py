@@ -13,6 +13,7 @@ from init import init_data_module, init_system
 from pl_modules.data_module import GraphDataModule
 from pl_modules.system import GraphSystem
 from pl_modules.transforms import Standardizer, SupportToAnomScore, ThresholdAtDelta
+from enum import Enum
 
 # k - dataset - delta combinations
 SETS = [
@@ -24,6 +25,17 @@ SETS = [
     (3, "lastfm", [0.6, 0.8]),
 ]
 # os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
+
+
+class Aggregator(str, Enum):
+    ffn = "ffn"
+    mean = "mean"
+
+
+class Embeddor(str, Enum):
+    graphsage = "gs"
+    gcn = "gcn"
+    rgcn = "rgcn"
 
 
 def trainable(hparams, cpus, gpus, seed, epochs, dir_prefix, checkpoint_dir=None):
@@ -97,15 +109,17 @@ def test_model(
 
 
 def run(
-    k: int,
-    datasetname: str,
-    delta: float,
-    emb: str,
-    agg: str,
-    cpus: int = 12,
-    gpus: int = 1,
-    epochs: int = 8,
-    hparam_search_samples: int = 16,
+    k: int = typer.Argument(..., help="size of patterns in dataset"),
+    datasetname: str = typer.Argument(..., help="dataset"),
+    delta: float = typer.Argument(..., help="negative/positive threshold"),
+    emb: Embeddor = typer.Argument(..., help="embedding function"),
+    agg: Aggregator = typer.Argument(..., help="aggregation function"),
+    cpus: int = typer.Option(12, help="number of threads to use"),
+    gpus: int = typer.Option(1, help="number of available gpus"),
+    epochs: int = typer.Option(8, help="number of epochs to train for"),
+    hparam_search_samples: int = typer.Option(
+        16, help="how many hyperparameter sets to sample"
+    ),
 ):
     ray.init(num_cpus=cpus, num_gpus=gpus)
 

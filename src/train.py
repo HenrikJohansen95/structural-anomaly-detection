@@ -4,7 +4,8 @@ import yaml
 
 def run(
     hparams_yml_path: str = typer.Argument(
-        None, help="path to a yaml config with model and training hyperparameters"
+        ...,
+        help="path to a yaml config with model and training hyperparameters",
     ),
     cpus: int = typer.Option(12, help="number of cpu cores to use"),
     gpus: int = typer.Option(1, help="number of gpus to use"),

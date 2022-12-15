@@ -1,7 +1,6 @@
 import pytorch_lightning as pl
 import torch
 import torch_geometric.nn
-import wandb
 from torch.nn import functional as F
 from torchmetrics import functional as tmf
 

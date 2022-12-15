@@ -1,4 +1,4 @@
-name: thesis
+name: venv
 channels:
   - pytorch
   - pyg
@@ -212,6 +212,7 @@ dependencies:
   - sentry-sdk=1.9.0=py310h06a4308_0
   - setproctitle=1.2.2=py310h7f8727e_0
   - setuptools=65.5.0=py310h06a4308_0
+  - shellingham=1.5.0=py310h06a4308_0
   - shortuuid=1.0.11=pyhd8ed1ab_0
   - six=1.16.0=pyhd3eb1b0_1
   - smmap=4.0.0=pyhd3eb1b0_0
@@ -230,6 +231,7 @@ dependencies:
   - torchmetrics=0.11.0=pyhd8ed1ab_0
   - torchvision=0.14.0=py310_cu117
   - tqdm=4.64.1=py310h06a4308_0
+  - typer=0.4.1=py310h06a4308_0
   - typing-extensions=4.4.0=py310h06a4308_0
   - typing_extensions=4.4.0=py310h06a4308_0
   - tzdata=2022g=h04d1e81_0

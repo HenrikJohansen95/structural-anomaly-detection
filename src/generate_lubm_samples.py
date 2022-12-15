@@ -3,15 +3,15 @@ import typer
 
 def generate_lubm_samples(
     base_lubm_path: str = typer.Argument(
-        None, help="the parent path of the generated lubm .owl files"
+        ..., help="the parent path of the generated lubm .owl files"
     ),
-    save_path: str = typer.Argument(None, help="where to save generated samples"),
-    k: int = typer.Argument(None, help="size of patterns"),
+    save_path: str = typer.Argument(..., help="where to save generated samples"),
+    k: int = typer.Argument(..., help="size of patterns"),
     graphs_per_size: int = typer.Argument(
-        None, help="how many subgraphs of each size to sample"
+        ..., help="how many subgraphs of each size to sample"
     ),
     K_per_graph: int = typer.Argument(
-        None, help="how many patterns to sample from each subgraph"
+        ..., help="how many patterns to sample from each subgraph"
     ),
 ) -> None:
     """Generates training samples from the LUBM graph.

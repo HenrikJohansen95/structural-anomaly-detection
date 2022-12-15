@@ -6,14 +6,14 @@ class NonExistantDataset(Exception):
 
 
 def generate_samples(
-    dataset: str = typer.Argument(None, help="name of dataset"),
-    save_path: str = typer.Argument(None, help="where to save generated samples"),
-    k: int = typer.Argument(None, help="size of patterns"),
+    dataset: str = typer.Argument(..., help="name of dataset"),
+    save_path: str = typer.Argument(..., help="where to save generated samples"),
+    k: int = typer.Argument(..., help="size of patterns"),
     graphs_per_size: int = typer.Argument(
-        None, help="how many subgraphs of each size to sample"
+        ..., help="how many subgraphs of each size to sample"
     ),
     K_per_graph: int = typer.Argument(
-        None, help="how many patterns to sample from each subgraph"
+        ..., help="how many patterns to sample from each subgraph"
     ),
 ) -> None:
     """Generates training samples from PyTorch Geometric datasets
