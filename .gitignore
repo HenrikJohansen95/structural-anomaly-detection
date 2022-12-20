@@ -11,24 +11,15 @@
 *.synctex.gz
 *-blx.bib
 
-# packages
+.mypy_cache
 /jena
 /lubm
-
-# Data
 /rawdata
-
 __pycache__
-
-# pytorch
 /runs
 /checkpoints
-.mypy_cache
-
-# python
 /venv
 /.vscode
-
 /lightning_logs
-
-.vscode
+/.vscode
+/.pytest_cache
